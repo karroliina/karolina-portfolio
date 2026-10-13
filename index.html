@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karolína Svatková — Concept Artist, Illustrator, Animator</title>
+  <meta name="description" content="Interactive Portfolio of Karolína Svatková. Concept art, illustration, game art, character design, and animation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Marck+Script&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AMBIENT SCANLINE & NOISE OVERLAY -->
+  <div class="crt-scanlines" aria-hidden="true"></div>
+
+  <!-- TORCHLIGHT CANVAS (MYSTERIOUS REVEAL EFFECT) -->
+  <canvas id="torch-canvas" aria-hidden="true"></canvas>
+
+  <!-- TOP HUD BAR -->
+  <header class="hud-header">
+    <div class="hud-brand">
+      <span class="hud-tag">[ARCHIVE // 2026]</span>
+      <span class="hud-title">KAROLÍNA SVATKOVÁ</span>
+    </div>
+    <nav class="hud-nav">
+      <a href="#hero" class="hud-link">[01 // COVER]</a>
+      <a href="#about" class="hud-link">[02 // DOSSIER]</a>
+      <a href="#lighting" class="hud-link">[03 // LIGHT LAB]</a>
+      <a href="#lineup" class="hud-link">[04 // LINEUP]</a>
+      <a href="#process" class="hud-link">[05 // PROCESS]</a>
+      <a href="#turnarounds" class="hud-link">[06 // TURNAROUNDS]</a>
+      <a href="#contact" class="hud-link">[07 // TRANSMIT]</a>
+    </nav>
+    <div class="hud-controls">
+      <button id="torch-toggle" class="hud-btn" title="Toggle flashlight mode">[TORCH: OFF]</button>
+      <button id="audio-toggle" class="hud-btn" title="Synthesize dark ambient drone">[SOUND: OFF]</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 01 // HERO CHAMBER -->
+    <section id="hero" class="chamber hero-chamber">
+      <div class="hero-grid">
+        <div class="hero-typography">
+          <div class="meta-label">[PORTFOLIO // SECTION 01]</div>
+          <h1 class="hero-title">PORTO<br>FOLIO.</h1>
+          <div class="hero-signature">Karolína Svatková</div>
+          <p class="hero-subtitle">Concept artist, Illustrator, Animator</p>
+          
+          <div class="hero-actions">
+            <a href="mailto:svatekarolin@seznam.cz" class="btn btn-crimson" id="copy-email-hero">
+              <span class="btn-text">svatekarolin@seznam.cz</span>
+              <span class="btn-indicator">[COPY]</span>
+            </a>
+            <a href="#lighting" class="btn btn-outline">
+              <span class="btn-text">ENTER ARCHIVE</span>
+              <span class="btn-indicator">[->]</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <span class="stat-num">03</span>
+              <span class="stat-name">YEAR // PSCC PRAGUE</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">09</span>
+              <span class="stat-name">SOURCE PLATES</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">INF</span>
+              <span class="stat-name">ATMOSPHERE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="art-frame hero-art-frame">
+            <div class="frame-tag">[PLATE 01 // BEAST OF THE MARSH]</div>
+            <img src="assets/hero_creature.png" alt="Horned mythical creature in dark reeds" class="inspectable-image" id="hero-beast-img">
+            <div class="frame-overlay-note">
+              <span>HOVER / CLICK TO ENLARGE</span>
+              <span>AMBER EYE GLOW ACTIVE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 // DOSSIER / ABOUT -->
+    <section id="about" class="chamber about-chamber">
+      <div class="section-header">
+        <span class="section-num">[02]</span>
+        <h2 class="section-title">DOSSIER // IDENTITY</h2>
+        <span class="section-tag">[PRAGUE // LISBON]</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-portrait-col">
+          <div class="art-frame portrait-frame">
+            <div class="frame-tag">[SUBJECT // KAROLÍNA SVATKOVÁ]</div>
+            <img src="assets/karolina_portrait.png" alt="Karolína Svatková Portrait" class="inspectable-image">
+            <div class="frame-footer-data">
+              <span>LOCATION: PRAGUE, CZECHIA</span>
+              <span>SPECIALTY: VISUAL EFFECTS & ANIMATION</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-info-col">
+          <h3 class="about-headline">I'M<br>KAROLÍNA<br>SVATKOVÁ</h3>
+          
+          <div class="bio-panel">
+            <p class="bio-text">
+              I was born in Prague and initially studied nursing before changing my career path to animation and visual effects.
+            </p>
+            <p class="bio-text">
+              I'm currently in my third year at the Prague School of Creative Communication, after completing an Erasmus exchange at Lusófona University in Lisbon.
+            </p>
+            <p class="bio-text">
+              My main interests are Concept art, illustration, game art and character art.
+            </p>
+          </div>
+
+          <div class="contact-matrix">
+            <div class="matrix-row">
+              <span class="matrix-key">EMAIL</span>
+              <a href="mailto:svatekarolin@seznam.cz" class="matrix-val">svatekarolin@seznam.cz</a>
+            </div>
+            <div class="matrix-row">
+              <span class="matrix-key">PHONE</span>
+              <a href="tel:+420777057050" class="matrix-val">777 057 050</a>
+            </div>
+            <div class="matrix-row">
+              <span class="matrix-key">ARTSTATION</span>
+              <a href="https://karliien.artstation.com" target="_blank" rel="noopener noreferrer" class="matrix-val">karliien.artstation.com [->]</a>
+            </div>
+            <div class="matrix-row">
+              <span class="matrix-key">ACADEMY</span>
+              <span class="matrix-val">Prague School of Creative Communication</span>
+            </div>
+            <div class="matrix-row">
+              <span class="matrix-key">EXCHANGE</span>
+              <span class="matrix-val">Lusófona University (Lisbon)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 // THE LIGHTING LABORATORY -->
+    <section id="lighting" class="chamber lighting-chamber">
+      <div class="section-header">
+        <span class="section-num">[03]</span>
+        <h2 class="section-title">THE LIGHTING LABORATORY</h2>
+        <span class="section-tag">[COMPOSITION, COLOR, LIGHT, ENVIRONMENT]</span>
+      </div>
+
+      <p class="section-lead">
+        A single dark entity studied across three divergent atmospheric conditions. Toggle environments below to witness how illumination shifts mood, rim scattering, and focal weight.
+      </p>
+
+      <div class="lighting-controls">
+        <button class="lighting-btn active" data-light="sunset">
+          <span class="btn-num">[01]</span>
+          <span class="btn-name">SUNSET // GOLDEN HOUR</span>
+          <span class="btn-status">[ACTIVE]</span>
+        </button>
+        <button class="lighting-btn" data-light="moonlight">
+          <span class="btn-num">[02]</span>
+          <span class="btn-name">MOONLIGHT // MIDNIGHT</span>
+          <span class="btn-status">[STANDBY]</span>
+        </button>
+        <button class="lighting-btn" data-light="overcast">
+          <span class="btn-num">[03]</span>
+          <span class="btn-name">OVERCAST // DIFFUSE SKY</span>
+          <span class="btn-status">[STANDBY]</span>
+        </button>
+        <button class="lighting-btn" id="light-split-view-btn">
+          <span class="btn-num">[04]</span>
+          <span class="btn-name">TRIPTYCH // ALL 3</span>
+          <span class="btn-status">[VIEW]</span>
+        </button>
+      </div>
+
+      <!-- MAIN INTERACTIVE LIGHTING VIEWPORT -->
+      <div class="lighting-stage" id="lighting-single-stage">
+        <div class="lighting-viewport art-frame">
+          <div class="frame-tag" id="current-light-tag">[ENV: SUNSET // WARM RIM LIGHT]</div>
+          <img src="assets/lighting_sunset.png" alt="Sunset study" id="lighting-active-img" class="inspectable-image">
+          <div class="stage-annotation" id="lighting-note">
+            <h4>ENVIRONMENT STUDY: SUNSET</h4>
+            <p>High-energy orange sky casting strong backlight silhouettes on foreground reeds, highlighting hair volumes and horn contours with warm rim illumination.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRIPTYCH SPLIT VIEW (HIDDEN BY DEFAULT) -->
+      <div class="lighting-triptych art-frame hidden" id="lighting-triptych-stage">
+        <div class="triptych-col" data-select="sunset">
+          <div class="triptych-header">[01 // SUNSET]</div>
+          <img src="assets/lighting_sunset.png" alt="Sunset" class="inspectable-image">
+          <div class="triptych-desc">Warm back-fire & golden horizon</div>
+        </div>
+        <div class="triptych-col" data-select="moonlight">
+          <div class="triptych-header">[02 // MOONLIGHT]</div>
+          <img src="assets/lighting_moonlight.png" alt="Moonlight" class="inspectable-image">
+          <div class="triptych-desc">Full moon silver glow & amber eye ignite</div>
+        </div>
+        <div class="triptych-col" data-select="overcast">
+          <div class="triptych-header">[03 // OVERCAST]</div>
+          <img src="assets/lighting_overcast.png" alt="Overcast" class="inspectable-image">
+          <div class="triptych-desc">Cold diffuse daylight & muted slate skies</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 // THE CHARACTER LINEUP -->
+    <section id="lineup" class="chamber lineup-chamber">
+      <div class="section-header">
+        <span class="section-num">[04]</span>
+        <h2 class="section-title">CHARACTER LINEUP</h2>
+        <span class="section-tag">[HISTORICAL SCI-FI NOVEL // ENSEMBLE CAST]</span>
+      </div>
+
+      <p class="section-lead">
+        Costume silhouettes and character personalities designed for a historical sci-fi novel. Select any character in the roster to isolate their design dossier.
+      </p>
+
+      <div class="lineup-master-strip art-frame">
+        <div class="frame-tag">[FULL ENSEMBLE ROSTER // 5 OPERATIVES]</div>
+        <img src="assets/lineup_full.png" alt="Full character lineup" class="inspectable-image">
+      </div>
+
+      <div class="lineup-tabs">
+        <button class="lineup-tab active" data-char="eike">[01 // EIKE]</button>
+        <button class="lineup-tab" data-char="alwin">[02 // ALWIN]</button>
+        <button class="lineup-tab" data-char="mila">[03 // MILA]</button>
+        <button class="lineup-tab" data-char="kurt">[04 // CAPTAIN KURT]</button>
+        <button class="lineup-tab" data-char="jurgen">[05 // SERGEANT JÜRGEN]</button>
+      </div>
+
+      <div class="lineup-detail-grid">
+        <div class="char-portrait-box art-frame">
+          <div class="frame-tag" id="char-tag">[FIGURE: EIKE]</div>
+          <img src="assets/character_eike.png" alt="Character spotlight" id="char-focus-img" class="inspectable-image">
+        </div>
+        <div class="char-dossier-box">
+          <div class="dossier-code" id="char-code">ID-01 // NOBLE / SCHOLAR</div>
+          <h3 class="char-name" id="char-name">EIKE</h3>
+          <p class="char-role" id="char-role">POET / REBEL INTELLECTUAL</p>
+          <div class="char-bio-panel">
+            <p id="char-desc">
+              Distinguished by loose ruffled aristocratic white shirts, dark tailored trousers, high riding boots, and a pendant necklace. Bears long dark hair and an expressive, reflective disposition contrary to the rigid military brass.
+            </p>
+          </div>
+          <div class="char-specs">
+            <div class="spec-row">
+              <span class="spec-label">ATTIRE</span>
+              <span class="spec-val" id="char-attire">Linen poet blouse, equestrian breeches, leather boots</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">WEAPON / GEAR</span>
+              <span class="spec-val" id="char-gear">Gold sigil medallion, personal journal</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label">TONE / PALETTE</span>
+              <span class="spec-val" id="char-tone">Burgundy, cream linen, earthen brown</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 // THE PROCESS ARCHIVE -->
+    <section id="process" class="chamber process-chamber">
+      <div class="section-header">
+        <span class="section-num">[05]</span>
+        <h2 class="section-title">THE PROCESS ARCHIVE</h2>
+        <span class="section-tag">[IDEATION // ITERATION // PRODUCTION]</span>
+      </div>
+
+      <div class="process-switch-nav">
+        <button class="process-project-btn active" data-project="fantasy">
+          [PROJECT A: CHARACTER FOR FANTASY NOVEL]
+        </button>
+        <button class="process-project-btn" data-project="scifi">
+          [PROJECT B: CHARACTER FOR SCI-FI ANIMATION]
+        </button>
+      </div>
+
+      <!-- FANTASY PROJECT PIPELINE -->
+      <div class="pipeline-view" id="pipeline-fantasy">
+        <div class="pipeline-steps-nav">
+          <button class="pipe-step-btn active" data-step="ref-f">[01 // REFERENCES]</button>
+          <button class="pipe-step-btn" data-step="thumb-f">[02 // THUMBNAILS]</button>
+          <button class="pipe-step-btn" data-step="sketch-f">[03 // SKETCHES]</button>
+          <button class="pipe-step-btn" data-step="gray-f">[04 // GRAYSCALES]</button>
+        </div>
+
+        <div class="pipeline-display art-frame">
+          <div class="frame-tag" id="fantasy-pipe-tag">[STAGE 01 // REFERENCES MOODBOARD]</div>
+          <div class="pipe-img-container">
+            <img src="assets/fantasy_references.png" alt="Fantasy references" id="fantasy-pipe-img" class="inspectable-image">
+          </div>
+          <div class="pipe-meta" id="fantasy-pipe-meta">
+            <h4>STAGE 01 // CULTURAL & MATERIAL REFERENCES</h4>
+            <p>Collection of ethnographic textures, reed headdresses, tribal textiles, and feline/canine facial studies that inform the beast's visual anatomy.</p>
+          </div>
+        </div>
+
+        <!-- GRAYSCALE SPECIAL GALLERY -->
+        <div class="grayscale-subgallery">
+          <div class="frame-tag">[FINAL PICKED OUT VERSIONS // VALUES & TEXTURES]</div>
+          <div class="subgallery-grid">
+            <div class="subgallery-card art-frame">
+              <span class="card-caption">SHAMANIC FEATHERED FORM</span>
+              <img src="assets/grayscale_shaman.png" alt="Shaman Grayscale" class="inspectable-image">
+            </div>
+            <div class="subgallery-card art-frame">
+              <span class="card-caption">RAM-HORNED CLOAKED BEAST</span>
+              <img src="assets/grayscale_beast.png" alt="Beast Grayscale" class="inspectable-image">
+            </div>
+            <div class="subgallery-card art-frame">
+              <span class="card-caption">DUAL VALUE STUDY</span>
+              <img src="assets/grayscales_full.png" alt="Full Grayscale Study" class="inspectable-image">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCI-FI PROJECT PIPELINE (HIDDEN BY DEFAULT) -->
+      <div class="pipeline-view hidden" id="pipeline-scifi">
+        <div class="pipeline-steps-nav">
+          <button class="pipe-step-btn active" data-step="sketch-s">[01 // ROUGH IDEATION]</button>
+          <button class="pipe-step-btn" data-step="ref-s">[02 // REFERENCES & COLOR]</button>
+          <button class="pipe-step-btn" data-step="ortho-s">[03 // SUIT ORTHOGRAPHICS]</button>
+        </div>
+
+        <div class="pipeline-display art-frame">
+          <div class="frame-tag" id="scifi-pipe-tag">[STAGE 01 // ROUGH EXPLORATION & HEAD STUDY]</div>
+          <div class="pipe-img-container">
+            <img src="assets/scifi_sketches.png" alt="Sci-fi exploration" id="scifi-pipe-img" class="inspectable-image">
+          </div>
+          <div class="pipe-meta" id="scifi-pipe-meta">
+            <h4>STAGE 01 // ROUGH EXPLORATION & CHESTPLATE CALLOUTS</h4>
+            <p>Redline anatomical checks, backpack latch mechanisms, and astronaut facial structure studies exploring proportions for animation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 // TURNAROUND MATRIX -->
+    <section id="turnarounds" class="chamber turnarounds-chamber">
+      <div class="section-header">
+        <span class="section-num">[06]</span>
+        <h2 class="section-title">FINAL TURNAROUNDS</h2>
+        <span class="section-tag">[SIMPLIFIED VERSION FOR 2D/3D ANIMATION]</span>
+      </div>
+
+      <p class="section-lead">
+        Animation-ready model sheets designed with simplified line language to ensure consistent volume conservation across camera rotations.
+      </p>
+
+      <div class="turnarounds-grid">
+        <div class="turnaround-card art-frame">
+          <div class="frame-tag">[FIGURE 01 // CRANIAL TURNAROUND]</div>
+          <img src="assets/turnaround_head.png" alt="Head turnaround" class="inspectable-image">
+          <div class="turnaround-info">
+            <h4>HEAD ROTATION MATRIX</h4>
+            <p>Side profile, 3/4 front, direct front, and rear nape study. Emphasizes clean jaw silhouettes and high-collar neck sleeve for quick animation keyframing.</p>
+          </div>
+        </div>
+
+        <div class="turnaround-card art-frame">
+          <div class="frame-tag">[FIGURE 02 // FULL BODY & HELMET SPEC]</div>
+          <img src="assets/turnaround_body.png" alt="Body turnaround" class="inspectable-image">
+          <div class="turnaround-info">
+            <h4>SUIT ORTHOGRAPHICS & SOLAR EMBLEM</h4>
+            <p>Full turnaround: Back harness, front pressurized suit, profile posture, and helmet glass visor with solar insignia callouts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 // ARCHIVAL PLATES -->
+    <section id="archival" class="chamber archival-chamber">
+      <div class="section-header">
+        <span class="section-num">[07]</span>
+        <h2 class="section-title">ORIGINAL PORTFOLIO PLATES</h2>
+        <span class="section-tag">[ALL 9 SOURCE FOLIOS // HIGH DEFINITION]</span>
+      </div>
+
+      <div class="plates-grid">
+        <div class="plate-card art-frame" data-page="1">
+          <div class="frame-tag">[FOLIO 01 // COVER]</div>
+          <img src="extracted_pages/page_1.png" alt="Page 1" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="2">
+          <div class="frame-tag">[FOLIO 02 // BIO]</div>
+          <img src="extracted_pages/page_2.png" alt="Page 2" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="3">
+          <div class="frame-tag">[FOLIO 03 // FANTASY NOVEL PROCESS]</div>
+          <img src="extracted_pages/page_3.png" alt="Page 3" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="4">
+          <div class="frame-tag">[FOLIO 04 // GRAYSCALES]</div>
+          <img src="extracted_pages/page_4.png" alt="Page 4" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="5">
+          <div class="frame-tag">[FOLIO 05 // SCI-FI ANIMATION PROCESS]</div>
+          <img src="extracted_pages/page_5.png" alt="Page 5" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="6">
+          <div class="frame-tag">[FOLIO 06 // TURNAROUNDS]</div>
+          <img src="extracted_pages/page_6.png" alt="Page 6" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="7">
+          <div class="frame-tag">[FOLIO 07 // LINEUP]</div>
+          <img src="extracted_pages/page_7.png" alt="Page 7" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="8">
+          <div class="frame-tag">[FOLIO 08 // ILLUSTRATION]</div>
+          <img src="extracted_pages/page_8.png" alt="Page 8" class="inspectable-image">
+        </div>
+        <div class="plate-card art-frame" data-page="9">
+          <div class="frame-tag">[FOLIO 09 // CLOSING]</div>
+          <img src="extracted_pages/page_9.png" alt="Page 9" class="inspectable-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 // CONTACT & TRANSMISSION -->
+    <section id="contact" class="chamber contact-chamber">
+      <div class="contact-card art-frame">
+        <div class="frame-tag">[TRANSMISSION TERMINAL // INQUIRIES & COLLABORATIONS]</div>
+        
+        <div class="contact-header">
+          <h2 class="contact-title">THANK<br>YOU.</h2>
+          <div class="contact-script">for your attention</div>
+        </div>
+
+        <div class="contact-links-grid">
+          <div class="contact-link-box">
+            <span class="box-label">PRIMARY DISPATCH</span>
+            <a href="mailto:svatekarolin@seznam.cz" class="contact-email-link" id="copy-email-btn">
+              svatekarolin@seznam.cz
+            </a>
+            <span class="box-action">[CLICK TO COPY]</span>
+          </div>
+
+          <div class="contact-link-box">
+            <span class="box-label">DIRECT PHONE</span>
+            <a href="tel:+420777057050" class="contact-phone-link">
+              +420 777 057 050
+            </a>
+            <span class="box-action">[VOICE / SMS]</span>
+          </div>
+
+          <div class="contact-link-box">
+            <span class="box-label">PORTFOLIO HOST</span>
+            <a href="https://karliien.artstation.com" target="_blank" rel="noopener noreferrer" class="contact-artstation-link">
+              karliien.artstation.com
+            </a>
+            <span class="box-action">[EXTERNAL DOSSIER ->]</span>
+          </div>
+        </div>
+
+        <!-- TRANSMIT FORM -->
+        <form class="transmission-form" id="transmit-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-sender">SENDER NAME / STUDIO</label>
+              <input type="text" id="form-sender" placeholder="e.g. CD Projekt Red / Guerrilla" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">CONTACT FREQUENCY (EMAIL)</label>
+              <input type="email" id="form-email" placeholder="name@domain.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="form-inquiry">TRANSMISSION MESSAGE // PROJECT SCOPE</label>
+            <textarea id="form-inquiry" rows="4" placeholder="Brief project description, timeline, or concept art role..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-crimson btn-block">
+            <span class="btn-text">DISPATCH INQUIRY</span>
+            <span class="btn-indicator">[SEND]</span>
+          </button>
+          <div class="form-feedback hidden" id="form-feedback">
+            [STATUS: INQUIRY PREPARED FOR svatekarolin@seznam.cz]
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="hud-footer">
+    <div class="footer-left">
+      <span>(C) 2026 KAROLÍNA SVATKOVÁ</span>
+      <span class="footer-sep">//</span>
+      <span>ALL RIGHTS RESERVED</span>
+    </div>
+    <div class="footer-center">
+      <span>NO ROUNDED EDGES</span>
+      <span class="footer-sep">//</span>
+      <span>NO EMOJIS</span>
+      <span class="footer-sep">//</span>
+      <span>NO GRADIENTS</span>
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/karroliina/karolina-portfolio" target="_blank" rel="noopener noreferrer">
+        GITHUB ARCHIVE [->]
+      </a>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN INSPECTOR MODAL -->
+  <div id="inspector-modal" class="inspector-modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-window art-frame">
+      <div class="modal-bar">
+        <span id="modal-title">[PLATE INSPECTION // HIGH DEFINITION]</span>
+        <button id="modal-close-btn" class="hud-btn">[CLOSE X]</button>
+      </div>
+      <div class="modal-content">
+        <img src="" alt="Inspected artwork" id="modal-image">
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

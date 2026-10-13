@@ -1,0 +1,29 @@
+# Virtual environments
+.venv/
+__pycache__/
+
+# Large media & unrelated binary files
+*.mp4
+*.m4a
+*.mb
+*.zpr
+*.ZPR
+*.zbr
+*.fbx
+*.uproject
+*.dmg
+*.app
+Old Spice*
+last_10_seconds*
+chipmunk*
+inverted_screenshots/
+last_10_seconds_frames/
+frame_*_inverted.png
+last_3_inverted_collage.png
+screenshot.png
+
+# Build caches & scratch
+.DS_Store
+/tmp/clang-cache
+scratch/
+*.swift
